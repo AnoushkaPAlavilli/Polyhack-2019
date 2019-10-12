@@ -5,7 +5,7 @@ Created on Fri Oct 11 19:41:41 2019
 
 @author: benpradko, anoushkaalavilli, ryangayhour
 """
-import sqlite
+import sqlite3
 conn = sqlite3.connect('todo.db')
 query = "<SQLite Query goes here>"
 result = conn.execute(query)
@@ -40,11 +40,11 @@ class Schema:
         pass
 
         if __name__ == "__main__":
-    Schema()
-    app.run(debug=True)
+            Schema()
+            app.run(debug=True)
 
     class ToDoModel:
-    TABLENAME = "TODO"
+        TABLENAME = "TODO"
 
     def __init__(self):
         self.conn = sqlite3.connect('todo.db')
